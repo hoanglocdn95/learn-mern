@@ -1,0 +1,50 @@
+# GET http://localhost:5000/api/auth
+# POST http://localhost:5000/api/auth/register
+# Content-Type: application/json
+
+# {
+#   "username": "hoangloc2",
+#   "password": "Cun123cun"
+# }
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "hoanglocdn95",
+  "password": "Cun123cun"
+}
+
+###
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjlkY2MzMTczMjhjMTNkM2FkODM3NjEiLCJpYXQiOjE2NTQ1Mjg0NTh9.Hdxo2mQ4khSNHmdEMNpOJFMlLw-sUxTQOhusuv58OIM
+
+{
+  "title": "Post 23245412",
+  "description": "Desc",
+  "status": "NEW"
+}
+
+### update POST
+PUT http://localhost:5000/api/posts/629df50ed14ba6bd59d465da
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjlkY2MzMTczMjhjMTNkM2FkODM3NjEiLCJpYXQiOjE2NTQ1Mjg0NTh9.Hdxo2mQ4khSNHmdEMNpOJFMlLw-sUxTQOhusuv58OIM
+
+{
+  "title": "Post Update laafn 21",
+  "description": "Desc",
+  "status": "DONE"
+}
+
+### get Post
+
+GET http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjlkY2MzMTczMjhjMTNkM2FkODM3NjEiLCJpYXQiOjE2NTQ1Mjg0NTh9.Hdxo2mQ4khSNHmdEMNpOJFMlLw-sUxTQOhusuv58OIM
+
+### delete post
+DELETE http://localhost:5000/api/posts/629df5ba556709047b619fc7
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjlkY2MzMTczMjhjMTNkM2FkODM3NjEiLCJpYXQiOjE2NTQ1Mjg0NTh9.Hdxo2mQ4khSNHmdEMNpOJFMlLw-sUxTQOhusuv58OIM
